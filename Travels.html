@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadams Travel Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- amCharts resources -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+    <style>
+        #chartdiv {
+            width: 100%;
+            height: 800px;
+            margin-bottom: 40px;
+        }
+        
+        .map-container {
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            padding: 5px;
+        }
+
+        .note {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/index.html" id="navbar__logo">Aadams Travel Blog</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/About.html" class="navbar__links">About</a>
+                </li>  
+                <li class="navbar__item">
+                    <a href="/Travels.html" class="navbar__links">Travels</a>
+                </li>  
+                <li class="navbar__item">
+                    <a href="/Blog.html" class="navbar__links">Blog</a>
+                </li> 
+                <li class="navbar__btn">
+                    <a href="https://www.youtube.com/@AadamAkbar" target="_blank" rel="noopener noreferrer" class="button">Videos</a></li> 
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="travel-heading">
+            <h1>My Travels</h1>
+        <p>Explore the countries I've visited!</p>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Interactive Map Container using amCharts -->
+        <div class="map-container">
+            <div id="chartdiv"></div>
+        </div>
+
+        <!-- Countries I've Visited -->
+        <section class="countries-visited">
+            <h2>Current Travels: 44*/197</h2>
+            <p class="note">* Excluding Hong Kong and Macau (cos they aren't countries), but I can't really say I've been to mainland china either so haven't highlighted it on the map.</p>
+            
+            <br>
+            
+            <div class="flag-grid">
+                <!-- Row 1 -->
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/UZBEK.png" alt="Uzbekistan Flag">
+                </div>
+                    <p>Uzbekistan</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/NEPAL.png" alt="Nepal Flag">
+                </div>
+                    <p>Nepal</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/IRELAND.png" alt="Ireland Flag">
+                </div>
+                    <p>Ireland</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/GERMANY.png" alt="Germany Flag">
+                </div>
+                    <p>Germany</p>
+                </div>
+                
+                
+                <!-- Row 2 -->
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/LUX.png" alt="Luxembourg Flag">
+                </div>
+                    <p>Luxembourg</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/ALBANIA.png" alt="Albania Flag">
+                </div>
+                    <p>Albania</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/JORDAN.png" alt="Jordan Flag">
+                </div>
+                    <p>Jordan</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/GREECE.png" alt="Greece Flag">
+                </div>
+                    <p>Greece</p>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/SWEDEN.png" alt="Sweden Flag">
+                </div>
+                    <p>Sweden</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/DENMARK.png" alt="Greece Flag">
+                </div>
+                    <p>Denmark</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/San_Marino_(2-3_ratio).png" alt="San Marino Flag">
+                </div>
+                    <p>San Marino</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/Finland.png" alt="Finland Flag">
+                </div>
+                    <p>Finland</p>
+                </div>
+
+
+                <!-- Row 4 -->
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/ESTONIA.png" alt="Estonia Flag">
+                </div>
+                    <p>Estonia</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/POLAND.png" alt="Poland Flag">
+                </div>
+                    <p>Poland</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/Qatar.png" alt="Qatar Flag">
+                </div>
+                    <p>Qatar</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/Tanzania.png" alt="Tanzania Flag">
+                </div>
+                    <p>Tanzania</p>
+                </div>
+
+
+                <!-- Row 5 -->
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/ANDORRA.png" alt="Andorra Flag">
+                </div>
+                    <p>Andorra</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/ESPANA.png" alt="Spain Flag">
+                </div>
+                    <p>Spain</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/BELIZE.png" alt="Belize Flag">
+                </div>
+                    <p>Belize</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/GUATEMALA.png" alt="Guatemala Flag">
+                </div>
+                    <p>Guatemala</p>
+                </div>
+
+                <!-- Row 6 -->
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/PAN.png" alt="Panama Flag">
+                </div>
+                    <p>Panama</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/NICO.png" alt="Nicaragua Flag">
+                </div>
+                    <p>Nicaragua</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/CR.png" alt="Costa Rica Flag">
+                </div>
+                    <p>Costa Rica</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/Romania.png" alt="Romania Flag">
+                </div>
+                    <p>Romania</p>
+                </div>
+
+
+                <!-- Row 7 -->
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/RUSSIA.png" alt="Russia Flag">
+                </div>
+                    <p>Russia</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/SLOVENIA.png" alt="Slovenia Flag">
+                </div>
+                    <p>Slovenia</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/Netherlands.jpg" alt="The Netherlands Flag">
+                </div>
+                    <p>Netherlands</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/SOUTHKOREA.png" alt="South Korea Flag">
+                </div>
+                    <p>South Korea</p>
+                </div>
+
+
+                <!-- Row 8 -->
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/JAPAN.png" alt="Japan Flag">
+                </div>
+                    <p>Japan</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/MACAU.png" alt="Macua Flag">
+                </div>
+                    <p>Macau</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/MALAYSIA.png" alt="Malaysia Flag">
+                </div>
+                    <p>Malaysia</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/SINGAPORE.png" alt="Singapore Flag">
+                </div>
+                    <p>Singapore</p>
+                </div>
+
+
+                <!-- Row 9 -->
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/HK.png" alt="Hong Kong Flag">
+                </div>
+                    <p>Hong Kong</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/HUNGARY.png" alt="Hungary Flag">
+                </div>
+                    <p>Hungary</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/BELGIUM.png" alt="Belgium Flag">
+                </div>
+                    <p>Belgium</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/CZECHIA.png" alt="Czechia Flag">
+                </div>
+                    <p>Czechia</p>
+                </div>
+
+
+                <!-- Row 10 -->
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/CANADA.png" alt="Canada Flag">
+                </div>
+                    <p>Canada</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/USA.png" alt="USA Flag">
+                </div>
+                    <p>United States of America</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/SWITZERLAND.png" alt="Switzerland Flag">
+                </div>
+                    <p>Switzerland</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/UAE.png" alt="UAE Flag">
+                </div>
+                    <p>United Arab Emirates</p>
+                </div>
+
+
+                <!-- Row 11 -->
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/PAK.png" alt="Pakistan Flag">
+                </div>
+                    <p>Pakistan</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/EGYPT.png" alt="Egypt Flag">
+                </div>
+                    <p>Egypt</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/TUNISIA.png" alt="Tunisia Flag">
+                </div>
+                    <p>Tunisia</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/SAUDI.png" alt="Saudi Arabia Flag">
+                </div>
+                    <p>Saudi Arabia</p>
+                </div>
+
+
+                <!-- Row 12 -->
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/TURKEY.png" alt="Turkey Flag">
+                </div>
+                    <p>Turkey</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/Vatican-City.png" alt="Vatican City Flag">
+                </div>
+                    <p>Vatican City</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/Italy.jpg" alt="Italy Flag">
+                </div>
+                    <p>Italy</p>
+                </div>
+                <div class="flag-item">
+                    <div class="flag-image-wrapper">
+                    <img src="FLAGS/FRANCE.png" alt="France Flag">
+                </div>
+                    <p>France</p>
+                </div>
+            </section>
+        </main>
+
+    <script>
+        // Initialize amCharts
+        am5.ready(function() {
+            // Create root element
+            var root = am5.Root.new("chartdiv");
+            
+            // Set themes
+            root.setThemes([am5themes_Animated.new(root)]);
+            
+            // Create the map chart
+            var chart = root.container.children.push(
+                am5map.MapChart.new(root, {
+                    panX: "translateX",
+                    panY: "translateY",
+                    projection: am5map.geoNaturalEarth1(),
+                    paddingLeft: 0,
+                    paddingRight: 0,
+                    paddingTop: 0,
+                    paddingBottom: 0
+                })
+            );
+            
+            // Create main polygon series for countries
+            var polygonSeries = chart.series.push(
+                am5map.MapPolygonSeries.new(root, {
+                    geoJSON: am5geodata_worldLow,
+                    exclude: ["AQ"], // Exclude Antarctica
+                    fill: am5.color(0xD4D4D4),
+                    stroke: am5.color(0xffffff)
+                })
+            );
+            
+            // Add countries you've visited as a separate series with purple color
+            var visitedCountries = ["UZ", "NP", "IE", "DE", "LU", "AL", "JO", "GR", "SE", "DK", "SM", "FI", 
+                                   "EE", "PL", "QA", "TZ", "AD", "ES", "BZ", "GT", "PA", "NI", "CR", "RO", 
+                                   "RU", "SI", "NL", "KR", "JP", "MY", "SG", "HU", "BE", "CZ", "CA", "US", 
+                                   "CH", "AE", "PK", "EG", "TN", "SA", "TR", "VA", "IT", "FR", "HK", "MO"];
+            
+            // Filter out UK from regular visited countries
+            var visitedWithoutUK = visitedCountries.filter(country => country !== "GB");
+            
+            // Create a series for visited countries in purple
+            var visitedSeries = chart.series.push(
+                am5map.MapPolygonSeries.new(root, {
+                    geoJSON: am5geodata_worldLow,
+                    include: visitedWithoutUK,
+                    fill: am5.color(0x8A2BE2), // Purple color for visited countries
+                    stroke: am5.color(0xffffff)
+                })
+            );
+            
+            // Create a separate series for UK in orange
+            var ukSeries = chart.series.push(
+                am5map.MapPolygonSeries.new(root, {
+                    geoJSON: am5geodata_worldLow,
+                    include: ["GB"],
+                    fill: am5.color(0xFF8C00), // Orange color for UK
+                    stroke: am5.color(0xffffff)
+                })
+            );
+            
+            // Configure polygon series
+            polygonSeries.mapPolygons.template.setAll({
+                interactive: true,
+                tooltipText: "{name}",  // This adds the country name tooltip
+                cursorOverStyle: "pointer"
+            });
+            
+            visitedSeries.mapPolygons.template.setAll({
+                interactive: true,
+                tooltipText: "{name}",  // This adds the country name tooltip
+                cursorOverStyle: "pointer"
+            });
+            
+            ukSeries.mapPolygons.template.setAll({
+                interactive: true,
+                tooltipText: "{name}",  // This adds the country name tooltip
+                cursorOverStyle: "pointer"
+            });
+            
+            // Set up hover states
+            polygonSeries.mapPolygons.template.states.create("hover", {
+                fill: am5.color(0xBBBBBB)
+            });
+            
+            visitedSeries.mapPolygons.template.states.create("hover", {
+                fill: am5.color(0x6A1B9A) // Darker purple on hover
+            });
+            
+            ukSeries.mapPolygons.template.states.create("hover", {
+                fill: am5.color(0xE65100) // Darker orange on hover
+            });
+
+            // Add zoom control
+            chart.set("zoomControl", am5map.ZoomControl.new(root, {}));
+            
+            // Make map responsive
+            chart.chartContainer.get("background").events.on("click", function() {
+                chart.goHome();
+            });
+            
+            // Set up initial animation
+            polygonSeries.events.on("datavalidated", function() {
+                chart.goHome(0);
+            });
+        });
+        
+        // Mobile menu functionality
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.navbar__menu');
+
+        menu.addEventListener('click', function() {
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
